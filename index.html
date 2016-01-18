@@ -1,27 +1,33 @@
 <!doctype html>
 <html>
 <head>
-    <title>ng2-beta</title>
+    <title>ng2-website</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="app/components/app.css">
-    <link rel="stylesheet" type="text/css" href="./node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="./app/components/app.css">
+    <link rel="stylesheet" type="text/css" href="./libs/materialize-css/dist/css/materialize.min.css">
     <title>ng2-web</title>
 </head>
 <body>
-    <script src="./node_modules/es6-shim/es6-shim.min.js"></script>
-    <script src="./node_modules/angular2/bundles/angular2-polyfills.min.js"></script>
-    <script src="./node_modules/systemjs/dist/system.js"></script>
-    <script src="./node_modules/rxjs/bundles/Rx.min.js"></script>
-    <script src="./node_modules/angular2/bundles/angular2.min.js"></script>
+    <!--Runtime libs-->
+    <script src="./libs/es6-shim/es6-shim.min.js"></script>
+    <script src="./libs/systemjs/dist/system.js"></script>
+
+    <!--SystemJs config-->
+    <script src="./system.config.js"></script>
+
+    <!--Framework Libs-->
+    <script src="./libs/angular2/bundles/angular2.min.js"></script>
+    <script src="./libs/angular2/bundles/angular2-polyfills.min.js"></script>
+    <script src="./libs/rxjs/bundles/Rx.min.js"></script>
 
     <!-- TODO Weird dependency between materialize.min.js and jquery.min.js -->
     <!-- TODO Import jquery and materialize using es6 import system -->
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>
-    <script src="./system.config.js"></script>
+    <script src="./libs/jquery/dist/jquery.min.js"></script>
+    <script src="./libs/materialize-css/dist/js/materialize.min.js"></script>
+
     <script>
         System
-            .import('app/bootstrap')
+            .import('./app/bootstrap')
             .then(null, console.error.bind(console));
     </script>
 

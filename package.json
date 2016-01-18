@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp serve"
   },
   "repository": {
     "type": "git",
@@ -17,21 +17,20 @@
   },
   "homepage": "https://github.com/Irving09/ng2-website#readme",
   "dependencies": {
-    "angular2": "^2.0.0-beta.0",
+    "angular2": "^2.0.0-beta.1",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
-    "jquery": "^2.1.4",
-    "materialize-css": "^0.97.3",
     "reflect-metadata": "^0.1.2",
     "rxjs": "^5.0.0-beta.0",
     "systemjs": "^0.19.8",
-    "zone.js": "^0.5.10"
+    "zone.js": "^0.5.10",
+    "jquery": "^2.1.4",
+    "materialize-css": "^0.97.3"
   },
   "devDependencies": {
     "concurrently": "^1.0.0",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
-    "gulp-inject": "^3.0.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-tslint": "^4.2.1",
     "gulp-typescript": "^2.10.0",

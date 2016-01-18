@@ -5,8 +5,21 @@ module.exports = function() {
         assets:     './app/components/**/!(*.ts)',
         index:      './index.html',
         config:     './system.config.js',
-        out:        './app/',
-        bin:        './app/**/*.{js,map}'
+        out:        './dist',
+        deps:       [
+            './node_modules/es6-shim/es6-shim.min.js',
+            './node_modules/es6-shim/es6-shim.map',
+            './node_modules/systemjs/dist/system.js',
+            './node_modules/systemjs/dist/system.js.map',
+            './node_modules/systemjs/dist/system-polyfills.js',
+            './node_modules/angular2/bundles/angular2.min.js',
+            './node_modules/angular2/bundles/angular2-polyfills.min.js',
+            './node_modules/rxjs/bundles/Rx.min.js',
+            './node_modules/rxjs/bundles/Rx.min.js.map',
+            './node_modules/jquery/dist/jquery.min.js',
+            './node_modules/materialize-css/dist/**/*.*',
+            './system.config.js'
+        ]
     };
 
     return PATHS;
