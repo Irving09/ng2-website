@@ -6,7 +6,7 @@ import { Component, View } from 'angular2/core';
 @View({
     templateUrl: './app/components/nav-bar/nav-bar.html',
 })
-export class NavigationBar {
+export class Navbar {
 
     ngOnInit() {
         let button: any = $('.dropdown-button');

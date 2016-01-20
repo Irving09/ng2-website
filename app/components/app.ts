@@ -1,12 +1,13 @@
 import { Component, View } from 'angular2/core';
-import { NavigationBar } from './nav-bar/nav-bar';
+import { Navbar } from './nav-bar/nav-bar';
+import { Dashboard } from './dashboard/dashboard';
 
 @Component({
     selector: 'beta'
 })
 @View({
     templateUrl: './app/components/app.html',
-	directives: [ NavigationBar ]
+	directives: [ Navbar, Dashboard ]
 })
 export class App {
 	ngOnInit() {
