@@ -9,7 +9,8 @@ import { Component, View } from 'angular2/core';
 export class NavigationBar {
 
     ngOnInit() {
-        $('.dropdown-button').dropdown({
+        let button: any = $('.dropdown-button');
+        button.dropdown({
             inDuration: 300,
             outDuration: 225,
             constrain_width: true,

@@ -10,8 +10,14 @@ import { NavigationBar } from './nav-bar/nav-bar';
 })
 export class App {
 	ngOnInit() {
-	  $(document).ready(function(){
-      	 $('.parallax').parallax();
-      });
+		this.domReady(function() {
+			let materialize: any = $('.parallax');
+			materialize.parallax();
+		});
+	}
+
+	private domReady(callback: any) {
+		document.readyState === 'interactive' ||
+		document.readyState === 'complete' ? callback() : document.addEventListener('DOMContentLoaded', callback);
 	}
 }

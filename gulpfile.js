@@ -30,17 +30,13 @@ gulp.task('lint', () => {
 
 gulp.task('copy.assets', () => {
     return gulp
-        .src([config.assets, config.index], {
-            'base' : '.'
-        })
+        .src([config.assets, config.index], { 'base' : '.' })
         .pipe(gulp.dest(config.out));
 });
 
 gulp.task('copy.dependencies', () => {
     return gulp
-        .src(config.deps, {
-            'base' : './node_modules'
-        })
+        .src(config.deps, { 'base' : './node_modules' })
         .pipe(gulp.dest(path.join(config.out, 'libs')));
 });
 
@@ -58,13 +54,8 @@ gulp.task('transpile', () => {
 gulp.task('lite-server', () => {
     let childProcess = exec('cd dist && lite-server');
 
-    childProcess.stdout.on('on', (data) => {
-        console.log(data.toString());
-    });
-
-    childProcess.stderr.on('on', (data) => {
-        console.log(data.toString());
-    });
+    childProcess.stdout.on('on', data => console.log(data.toString()));
+    childProcess.stderr.on('on', data => console.log(data.toString()));
 });
 
 gulp.task('serve', ['lint', 'transpile', 'copy'], () => {
